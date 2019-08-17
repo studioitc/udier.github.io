@@ -1,0 +1,8 @@
+title: Archivi UDI
+description: Sito della rete degli archivi UDI dell'Emilia-Romagna
+logo: logo-rete-archivi-undi.jpg
+
+
+defaults:
+  - values:
+      layout: default

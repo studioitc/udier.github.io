@@ -1,0 +1,23 @@
+---
+---
+$blue:    #7B41A4 !default;
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+/* Base */
+@import "site-base";
+/* Navbar */
+@import "site-navbar";
+/* Blocks */
+@import "site-blocks";
+
+.intro-section {
+  &.article{
+    height: 10vh;
+    min-height: 90px;
+    &:before{
+      width: 100%!important;
+    }
+  }
+}

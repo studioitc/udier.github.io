@@ -3,7 +3,10 @@ description: >
   Sito della rete degli archivi UDI dell'Emilia-Romagna. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro consectetur ut hic ipsum et veritatis corrupti. Itaque eius soluta optio dolorum temporibus in, atque, quos fugit sunt sit quaerat dicta.
 logo: logo-rete-archivi-udi.jpg
 
-exclude: ['site', '__tmpl', '__amplify']
+exclude:
+  - /site
+  - __*
+
 sass:
     sass_dir: _sass
 

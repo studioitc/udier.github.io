@@ -4,8 +4,10 @@ description: >
 logo: logo-rete-archivi-udi.jpg
 
 exclude:
-  - /site
+  - site
   - __*
+  - Gemfile
+  - Gemfile.lock
 
 sass:
     sass_dir: _sass

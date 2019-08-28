@@ -3,7 +3,6 @@ jQuery(document).ready(function($) {
   "use strict";
 
 
-
   var siteMenuClone = function() {
 
     $('.js-clone-nav').each(function() {
@@ -13,7 +12,6 @@ jQuery(document).ready(function($) {
 
 
     setTimeout(function() {
-
       var counter = 0;
       $('.site-mobile-menu .has-children').each(function(){
         var $this = $(this);
@@ -82,39 +80,6 @@ jQuery(document).ready(function($) {
     });
   };
   siteMenuClone();
-
-
-  var sitePlusMinus = function() {
-    $('.js-btn-minus').on('click', function(e){
-      e.preventDefault();
-      if ( $(this).closest('.input-group').find('.form-control').val() != 0  ) {
-        $(this).closest('.input-group').find('.form-control').val(parseInt($(this).closest('.input-group').find('.form-control').val()) - 1);
-      } else {
-        $(this).closest('.input-group').find('.form-control').val(parseInt(0));
-      }
-    });
-    $('.js-btn-plus').on('click', function(e){
-      e.preventDefault();
-      $(this).closest('.input-group').find('.form-control').val(parseInt($(this).closest('.input-group').find('.form-control').val()) + 1);
-    });
-  };
-  // sitePlusMinus();
-
-
-  var siteSliderRange = function() {
-    $( "#slider-range" ).slider({
-      range: true,
-      min: 0,
-      max: 500,
-      values: [ 75, 300 ],
-      slide: function( event, ui ) {
-        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-      }
-    });
-    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-      " - $" + $( "#slider-range" ).slider( "values", 1 ) );
-  };
-  // siteSliderRange();
 
 
 
@@ -204,40 +169,16 @@ jQuery(document).ready(function($) {
   };
   siteSticky();
 
-  // navigation
-  var OnePageNavigation = function() {
-    var navToggler = $('.site-menu-toggle');
-     $("body").on("click", ".main-menu li a[href^='#'], .smoothscroll[href^='#'], .site-mobile-menu .site-nav-wrap li a", function(e) {
-      e.preventDefault();
-
-      var hash = this.hash;
-
-      $('html, body').animate({
-        'scrollTop': $(hash).offset().top
-      }, 600, 'easeInOutCirc', function(){
-        window.location.hash = hash;
-      });
-
-    });
-  };
-  OnePageNavigation();
-
   var siteScroll = function() {
 
-
-
     $(window).scroll(function() {
-
       var st = $(this).scrollTop();
-
       if (st > 100) {
         $('.js-sticky-header').addClass('shrink');
       } else {
         $('.js-sticky-header').removeClass('shrink');
       }
-
     });
-
   };
   siteScroll();
 

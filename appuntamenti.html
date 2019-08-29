@@ -1,0 +1,34 @@
+---
+layout: internal
+---
+
+<div class="site-section bg-light">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-6 mb-5">
+        <h2 class="section-title">Appuntamenti</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam voluptatibus animi aspernatur ducimus quas obcaecati mollitia quibusdam temporibus culpa dolore molestias blanditiis consequuntur sunt nisi.</p>
+      </div>
+    </div>
+
+    <div class="row">
+
+      {% for post in site.posts %}
+      <div class="col-lg-4">
+        <div class="process p-3">
+          <span class="number small">{{ post.date | date: "%m/%y" }}</span>
+          <div>
+            <h3>{{ post.title }}</h3>
+            <p class="date">{{ post.date | date: "%d/%m/%Y" }}</p>
+            <p>{{ post.content | strip_html | truncatewords: 10 }}...</p>
+            <a href="{{ post.url | relative_url }}" title="{{ page.title}}">Apri</a>
+          </div>
+
+        </div>
+      </div>
+    {% endfor %}
+
+    </div>
+  </div>
+</div>

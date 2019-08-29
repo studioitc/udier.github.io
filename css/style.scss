@@ -37,3 +37,13 @@ $blue:    #7B41A4 !default;
     padding: none;
   }
 }
+
+.number{
+  &.small{
+    font-size: 7.5rem;
+  }
+}
+
+.bg-light .process{
+  background-color: #fff;
+}

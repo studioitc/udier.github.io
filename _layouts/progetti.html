@@ -26,7 +26,7 @@ layout: internal
             <div>
               <h3>{{ page.title }}</h3>
               <p>{{ page.content | truncatewords: 10 }}</p>
-              <a href="{{ page.url }}" title="{{ page.title}}">Apri</a>
+              <a href="{{ page.url | relative_url }}" title="{{ page.title}}">Apri</a>
             </div>
 
           </div>

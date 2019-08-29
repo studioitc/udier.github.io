@@ -1,8 +1,7 @@
 ---
-pretitle: UDI
-title: Chi siamo
+pretitle: Progetti
+title: Progetto 2
 layout: article
-permalink: /chi-siamo
 image: images/about_1.jpg
 caption: Questa è la didascalia dell'immagine dell'articolo
 ---

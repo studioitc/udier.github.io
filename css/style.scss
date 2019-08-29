@@ -12,12 +12,28 @@ $blue:    #7B41A4 !default;
 /* Blocks */
 @import "site-blocks";
 
-.intro-section {
-  &.article{
+/* Overwrites */
+.internal{
+  .intro-section {
     height: 10vh;
     min-height: 90px;
     &:before{
       width: 100%!important;
     }
+  }
+
+  .site-section {
+    padding-top: 1rem !important;
+  };
+}
+
+.image-absolute-box .box {
+  top: 3%;
+  padding: 10px 15px;
+
+  p{
+    color: rgba(255, 255, 255, .8);
+    text-align: center;
+    padding: none;
   }
 }

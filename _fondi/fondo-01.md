@@ -7,3 +7,4 @@ layout: article
 lat: '44.493714'
 lng: '11.343011'
 ---
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam voluptatibus animi aspernatur ducimus quas obcaecati mollitia quibusdam temporibus culpa dolore molestias blanditiis consequuntur sunt nisi.

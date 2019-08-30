@@ -6,6 +6,7 @@ backend:
 
 media_folder: "images"
 
+
 collections:
   - name: "fondi" # Used in routes, e.g., /admin/collections/blog
     label: "Fondi" # Used in the UI

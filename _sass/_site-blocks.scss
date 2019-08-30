@@ -1,5 +1,5 @@
 .intro-section {
-	
+
 	position: relative;
 	&, .container .row {
 		height: 100vh;
@@ -92,7 +92,7 @@
 }
 
 .counter {
-	
+
 	.icon-wrap {
 		margin-right: 1.5rem;
 		> span {
@@ -152,10 +152,6 @@
 	}
 }
 
-.section-1 {
-	margin-top: 10rem;
-}
-
 .work-thumb {
 	position: relative;
 	display: block;
@@ -180,7 +176,7 @@
 		z-index: 2;
 		opacity: 0;
 		visibility: hidden;
-		
+
 		transition: .3s all ease;
 		margin-top: 20px;
 

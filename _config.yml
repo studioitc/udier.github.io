@@ -17,6 +17,8 @@ collections:
     output: true
   progetti:
     output: true
+  appuntamenti:
+    output: true
 
 defaults:
   - values:

@@ -20,3 +20,4 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "article"}
       - {label: "Latitudine", name: "lat", widget: "string"}
       - {label: "Longitudine", name: "lng", widget: "string"}
+      - {label: "Testo", name: "body", widget: "markdown"}

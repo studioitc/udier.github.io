@@ -13,8 +13,10 @@ sass:
     sass_dir: _sass
 
 collections:
-  - fondi
-  - progetti
+  fondi:
+    output: true
+  progetti:
+    output: true
 
 defaults:
   - values:

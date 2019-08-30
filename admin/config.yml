@@ -1,8 +1,8 @@
 backend:
   name: github
-  repo: jbogdani/udi-er
+  repo: bdus-dev/udi-er
   branch: master
-  site_domain: trusting-kare-a10771.netlify.com
+  site_domain: modest-heisenberg-8607c6.netlify.com
 
 media_folder: "images"
 

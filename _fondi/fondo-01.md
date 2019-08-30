@@ -1,11 +1,10 @@
 ---
 pretitle: Fondi
-title: Fondo 1
-layout: article
+title: Questo e il nome del fondo 2
 image: images/about_1.jpg
 caption: Questa è la didascalia dell'immagine dell'articolo
-lat: 1.0
-lng: 0.1
+layout: article
+lat: '44.493714'
+lng: '11.343011'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam voluptatibus animi aspernatur ducimus quas obcaecati mollitia quibusdam temporibus culpa dolore molestias blanditiis consequuntur sunt nisi.

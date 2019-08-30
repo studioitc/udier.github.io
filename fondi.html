@@ -1,5 +1,7 @@
 ---
 layout: internal
+custom_js: /
+custom_css: /
 ---
 
 <div class="site-section">
@@ -7,20 +9,20 @@ layout: internal
 
     <div class="row">
       <div class="col-lg-6 mb-5">
-        <h2 class="section-title">Progetti</h2>
+        <h2 class="section-title">Fondi</h2>
+        <div id="map">
+
+        </div>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam voluptatibus animi aspernatur ducimus quas obcaecati mollitia quibusdam temporibus culpa dolore molestias blanditiis consequuntur sunt nisi.</p>
       </div>
     </div>
 
     <div class="row">
-      {% assign count = 0 %}
 
-      {% for page in site.progetti %}
-        {% assign count = count | plus: 1 %}
+      {% for page in site.fondi %}
 
         <div class="col-lg-4">
           <div class="process p-3">
-            <span class="number">{{ count | prepend: '00' | slice: -2, 2 }}</span>
             <div>
               <h3>{{ page.title }}</h3>
               <p>{{ page.content | truncatewords: 10 }}</p>
@@ -29,6 +31,7 @@ layout: internal
 
           </div>
         </div>
+
       {% endfor %}
     </div>
   </div>

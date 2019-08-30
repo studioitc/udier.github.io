@@ -12,6 +12,10 @@ exclude:
 sass:
     sass_dir: _sass
 
+collections:
+  - fondi
+  - progetti
+
 defaults:
   - values:
       layout: default

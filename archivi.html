@@ -1,7 +1,7 @@
 ---
 layout: internal
-custom_js: /
-custom_css: /
+custom_js: ["https://unpkg.com/leaflet@1.5.1/dist/leaflet.js", "map"]
+custom_css: ["https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"]
 ---
 
 <div class="site-section">
@@ -9,17 +9,15 @@ custom_css: /
 
     <div class="row">
       <div class="col-lg-6 mb-5">
-        <h2 class="section-title">Fondi</h2>
-        <div id="map">
-
-        </div>
+        <h2 class="section-title">Archivi</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam voluptatibus animi aspernatur ducimus quas obcaecati mollitia quibusdam temporibus culpa dolore molestias blanditiis consequuntur sunt nisi.</p>
       </div>
     </div>
 
-    <div class="row">
+    <div id="map" data-path="{ "/" | relative_url }"></div>
 
-      {% for page in site.fondi %}
+    <div class="row">
+      {% for page in site.archivi %}
 
         <div class="col-lg-4">
           <div class="process p-3">
@@ -33,6 +31,13 @@ custom_css: /
         </div>
 
       {% endfor %}
+      <script>var map_data = [ {% for page in site.archivi %}
+        {
+          "title": "{{page.title}}",
+          "lat": {{ page.lat }},
+          "lng": {{ page.lng }}
+        },
+        {% endfor %} ]</script>
     </div>
   </div>
 </div>

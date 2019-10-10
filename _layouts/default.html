@@ -16,6 +16,15 @@
     <link rel="stylesheet" href={{"fonts/icomoon/style.css" | relative_url}}>
 
     <link rel="stylesheet" href={{"css/style.css" | relative_url }}>
+    {% if page.custom_css %}
+      {% for css in page.custom_css %}
+        {% if css contains "http" %}
+        <link rel="stylesheet" href="{{ css }}">
+        {% else %}
+        <link rel="stylesheet" href={{"css/" | append: css | append: ".css" | relative_url }}>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
 
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -104,6 +113,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha256-pTxD+DSzIwmwhOqTFN+DB+nHjO4iAsbgfyFq5K5bcE0=" crossorigin="anonymous"></script>
 
   <script src={{ "js/main.js" | relative_url }}></script>
+
+  {% if page.custom_js %}
+    {% for js in page.custom_js %}
+      {% if js contains "http" %}
+      <script src="{{ js }}"></script>
+      {% else %}
+      <script src={{ "js/" | append: js | append: ".js" | relative_url }}></script>
+      {% endif %}
+
+    {% endfor %}
+  {% endif %}
 
   </body>
 </html>

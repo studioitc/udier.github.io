@@ -33,9 +33,10 @@ custom_css: ["https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"]
       {% endfor %}
       <script>var map_data = [ {% for page in site.archivi %}
         {
-          "title": "{{page.title}}",
+          "title": "{{ page.title }}",
           "lat": {{ page.lat }},
-          "lng": {{ page.lng }}
+          "lng": {{ page.lng }},
+          "href": "{{ page.url | relative_url }}"
         },
         {% endfor %} ]</script>
     </div>

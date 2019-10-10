@@ -44,7 +44,6 @@ function Map(mapid, places, path2root){
 
       this.clear();
       places.forEach(function(p){
-        console.log(getIcon(p.current));
 
         var m = L.marker([p.lat, p.lng], {icon: getIcon(p.current)})
                   .bindPopup('<div class="balloon"><a href="' + p.href + '"><i class="fas fa-industry"></i> ' + p.title + '</a></div>')

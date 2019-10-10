@@ -1,8 +1,6 @@
 ---
 pretitle: Archivi
 title: Archivio UDI Ferrara
-image: /images/about_1.jpg
-caption: UDI Ferrara
 layout: article
 lat: '44.8362394'
 lng: '11.6064457'

@@ -1,5 +1,9 @@
 ---
 layout: internal
+app_list:
+  - title: Giornata di studio per il trentennale della Rete Archivi UDI Emilia-Romagna
+    date: 23.10.2019
+    file: ciao
 ---
 
 <div class="site-section bg-light">
@@ -13,6 +17,23 @@ layout: internal
     </div>
 
     <div class="row">
+
+      {% assign count = 0 %}
+
+      {% for app in page.app_list %}
+      {% assign count = count | plus: 1 %}
+      <div class="col-lg-4">
+        <div class="process p-3 shadow">
+          <div>
+            <h3>{{ app.title }}</h3>
+            <p class="date">{{ app.date | date: "%d/%m/%Y" }}</p>
+          </div>
+
+        </div>
+      </div>
+      {% endfor %}
+
+{% comment %}
 
       {% for post in site.appuntamenti %}
       <div class="col-lg-4">
@@ -28,6 +49,7 @@ layout: internal
         </div>
       </div>
     {% endfor %}
+{% endcomment %}
 
     </div>
   </div>

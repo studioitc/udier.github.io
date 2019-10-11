@@ -16,7 +16,6 @@ function getIcon(current){
     svg = svg.replace('fill="#FFFFFF"', 'fill="#ccbc79"');
   }
   svg = encodeURI("data:image/svg+xml," + svg).replace(/#/g,'%23');
-  console.log(svg);
 
   return L.icon({
     iconUrl: svg,
@@ -55,7 +54,6 @@ function Map(mapid, places, path2root){
       if (markers.length > 0) {
         var group = new L.featureGroup(markers);
         map.fitBounds(group.getBounds());
-        map.setMaxBounds(group.getBounds());
       } else {
         console.log('Nessun luogo trovato!');
       }

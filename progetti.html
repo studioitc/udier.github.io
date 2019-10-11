@@ -2,25 +2,72 @@
 layout: internal
 prj_list:
   - title: Seminario regionale “progetto di recupero, ordinamento, valorizzazione di un patrimonio storico delle donne”, primo incontro Bologna 9 febbraio 1991; secondo incontro 13 aprile 1991
-    files: Uno
+    files:
+      - name: 0.1.pdf
+        path: images/progetti/0.1.pdf
+      - name: 0.2.pdf
+        path: images/progetti/0.2.pdf
   - title: Incontro di discussione “50:13 0 UDI. Percorsi della memoria, idee per il futuro”, bologna 14 novembre 1992
-    files: bau
+    files:
+      - name: A.1.pdf
+        path: images/progetti/A.1.pdf
+      - name: A.2.pdf
+        path: images/progetti/A.2.pdf
   - title: Seminario nazionale di studi “Soggettività femminile in (un) movimento. Le donne dell'Udi, storie memorie sguardi”, Modena 18 dicembre 1999
-    files: bau
+    files:
+      - name: 1.1.pdf
+        path: images/progetti/1.1.pdf
+      - name: Copertina della pubblicazione atti convegno a cura di Vittorina Maestroni e Angela Remaggi, Centro documentazione donna
+        path: images/progetti/1.2.pdf
   - title: Seminario di studi in occasione della presentazione del volume “Soggettività femminile in (un) movimento. Le donne dell'Udi, storie memorie sguardi”, Ferrara 9 novembre 2001
-    files: bau
+    files:
+      - name: 2.1.pdf
+        path: images/progetti/2.1.pdf
+      - name: 2.2.pdf
+        path: images/progetti/2.2.pdf
+      - name: 2.3.pdf
+        path: images/progetti/2.3.pdf
+      - name: 2.4.pdf
+        path: images/progetti/2.4.pdf
   - title: "Ricerca Fonti orali: raccolta di fonti orali a 94 donne dell‘Udi a cura del CDD con la collaborazione delle archivi della Rete regionale"
-    files: bau
   - title: Pubblicazione “Volevamo cambiare il mondo. Memorie e storie delle donne dell'Udi in Emilia Romagna” a cura di Caterina Liotti et al, Roma, Carocci 2002
-    files: bau
+    files:
+      - name: 4.pdf
+        path: images/progetti/4.pdf
+      - name: 5.1.pdf
+        path: images/progetti/5.1.pdf
+      - name: 5.2.pdf
+        path: images/progetti/5.2.pdf
+      - name: 5.3.pdf
+        path: images/progetti/5.3.pdf
+      - name: 5.4.pdf
+        path: images/progetti/5.4.pdf
   - title: Seminario “Documentare la differenza. Gli archivi delle donne tra memoria e innovazione tecnologica”, Bologna 4 dicembre 2004
-    files: bau
+    files:
+      - name: 6.1.pdf
+        path: images/progetti/6.1.pdf
+      - name: 6.2.pdf
+        path: images/progetti/6.2.pdf
   - title: Mostra “Donne manifeste. L'Udi attraverso i suoi manifesti 1944-2004”
-    files: bau
+    files:
+      - name: 7.1.pdf
+        path: images/progetti/7.1.pdf
+      - name: 7.2.pdf
+        path: images/progetti/7.2.pdf
+      - name: 7.3.pdf
+        path: images/progetti/7.3.pdf
   - title: Convegno “Cittadinanza femminile plurale. Gli archivi dell’UDI per una storia del welfare in Emilia-Romagna”, Bologna 21 ottobre 2013
-    files: bau
+    files:
+      - name: 8.1.pdf
+        path: images/progetti/8.1.pdf
+      - name: 8.2.pdf
+        path: images/progetti/8.2.pdf
+      - name: Report finale progetto Welfare
+        path: images/progetti/Report-finale-welfare.pdf
   - title: Seminario “Raccontare non basta. Per una riflessione sui Gruppi di difesa della donna in Emilia-Romagna”, Modena, 21 novembre 2015
-    files: bau
+    files:
+      - name: 9.pdf
+        path: images/progetti/9.pdf
 
 ---
 
@@ -46,6 +93,11 @@ prj_list:
           <span class="number">{{ count | prepend: '00' | slice: -2, 2 }}</span>
           <div>
             <h3>{{ proj.title }}</h3>
+            <p>Allegati</p>
+            {% for f in proj.files %}
+            <li><a href="{{ f.path | relative_url }}">{{ f.name }}</a>
+            {% endfor %}
+
             <p>{{ proj.content | truncatewords: 10 }}</p>
           </div>
 

@@ -14,8 +14,10 @@ custom_css: ["https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"]
       </div>
     </div>
 
-    <div id="map" data-path="{{ "/" | relative_url }}"></div>
+    {% include mappa.html %}
 
+
+    <hr class="my-5" />
     <div class="row">
       {% for page in site.archivi %}
 
@@ -31,14 +33,6 @@ custom_css: ["https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"]
         </div>
 
       {% endfor %}
-      <script>var map_data = [ {% for page in site.archivi %}
-        {
-          "title": "{{ page.title }}",
-          "lat": {{ page.lat }},
-          "lng": {{ page.lng }},
-          "href": "{{ page.url | relative_url }}"
-        },
-        {% endfor %} ]</script>
     </div>
   </div>
 </div>

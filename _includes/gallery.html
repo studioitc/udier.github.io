@@ -1,7 +1,10 @@
 <div class="owl-carousel nonloop-block-13">
 {% for image in site.static_files %}
    {% if image.path contains include.gallery %}
-      <a class="work-thumb" href="{{ image.path | relative_url }}" data-fancybox="gallery-{{ include.gallery }}">
+      <a class="work-thumb"
+          href="{{ image.path | relative_url }}"
+          data-fancybox="gallery-{{ include.gallery }}"
+          data-caption="{{ site.data.galleries[include.gallery][image.basename] | join: '<br>' }}">
          <div class="work-text">
            <h3>{{ site.data.galleries[include.gallery][image.basename][0] }}</h3>
            <span class="category">{{ site.data.galleries[include.gallery][image.basename][1] }}</span>

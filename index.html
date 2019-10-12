@@ -13,7 +13,7 @@ custom_css: ["https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"]
       <div class="col-lg-4 mr-auto">
         <h1>Archivi UDI Emilia-Romagna.</h1>
         <p class="mb-5">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsa nulla sed quis rerum amet natus quas necessitatibus.
+          La Rete Regionale Archivi UDI Emilia-Romagna è una associazione di promozione sociale, nata nel 1989 come forma di coordinamento tra gli archivi Udi di Bologna, Ferrara, Forlì, Imola, Modena, Ravenna e Reggio Emilia. Fa parte della rete anche il Centro Documentazione Donna di Modena, dove sono depositati gli archivi dell’UDI di Modena e, dal 2019, anche di Reggio Emilia.
         </p>
 
         <p><a href={{ "archivi" | relative_url }} class="btn btn-outline-light py-3 px-5">Guarda la mappa</a></p>
@@ -27,10 +27,8 @@ custom_css: ["https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"]
   </div>
 </div>
 
-
+{% comment %}
 <div class="site-section">
-
-
   <div class="container">
     <div class="row">
       <div class="col-lg-5 mr-auto mb-5">
@@ -92,8 +90,11 @@ custom_css: ["https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"]
   </div>
 
 </div>
+{% endcomment %}
+
 
 <div class="site-section" id="work-section">
+{% comment %}
   <div class="container">
     <div class="row">
       <div class="col-lg-6 mb-5">
@@ -104,6 +105,8 @@ custom_css: ["https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"]
     </div>
 
   </div>
+{% endcomment %}
+
 
   <div class="my-5">
     {% include gallery.html gallery="gallery-home" %}
@@ -112,6 +115,4 @@ custom_css: ["https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"]
   <div class="container">
     {% include mappa.html %}
   </div>
-
-
 </div>

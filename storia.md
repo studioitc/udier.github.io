@@ -1,5 +1,4 @@
 ---
-pretitle: UDI
 title: Storia
 layout: article
 permalink: /storia

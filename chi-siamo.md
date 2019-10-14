@@ -1,5 +1,4 @@
 ---
-pretitle: UDI
 title: Chi siamo
 layout: article
 permalink: /chi-siamo

@@ -3,7 +3,9 @@ layout: internal
 app_list:
   - title: Giornata di studio per il trentennale della Rete Archivi UDI Emilia-Romagna
     date: 23.10.2019
-    file: ciao
+    files:
+      - name: Programma dell'evento (PDF)
+        path: images/appuntamenti/2019-10-23-manifesto-web.pdf
 ---
 
 <div class="site-section bg-light">
@@ -27,6 +29,11 @@ app_list:
           <div>
             <h3>{{ app.title }}</h3>
             <p class="date">{{ app.date | date: "%d/%m/%Y" }}</p>
+            <p>Allegati</p>
+
+            {% for f in app.files %}
+            <li><a href="{{ f.path | relative_url }}">{{ f.name }}</a>
+            {% endfor %}
           </div>
 
         </div>

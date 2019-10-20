@@ -4,8 +4,8 @@ title: Archivio UDI Bologna
 image: /images/archivi/bologna.jpg
 caption: Archivio UDI Bologna
 layout: article
-lat: '44.490497'
-lng: '11.3467523'
+lat: 44.490497
+lng: 11.3467523
 ---
 
 L’Archivio UDI Bologna ha aperto le porte al pubblico nel 1991, dopo un processo di riordino e inventariazione iniziato nel 1987 e curato da aderenti all'associazione (il Gruppo Archivio) con l'ausilio di personale specializzato. Il Gruppo Archivio, che divenne formalmente una delle articolazioni interne dell’associazione, si attivò anche per il reperimento della documentazione, in particolare fotografica, in possesso delle militanti. Nel 1991, l’Archivio venne dichiarato di notevole interesse storico dalla Sovrintendenza archivistica e bibliografica dell’Emilia-Romagna.

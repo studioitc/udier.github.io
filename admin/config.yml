@@ -2,7 +2,7 @@ backend:
   name: github
   repo: bdus-dev/udi-er
   branch: master
-  site_domain: modest-heisenberg-8607c6.netlify.com
+  site_domain: retearchiviudier.it
 
 media_folder: "images"
 

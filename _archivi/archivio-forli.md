@@ -1,6 +1,8 @@
 ---
 pretitle: Archivi
 title: Archivio UDI Forlì
+image: /images/archivi/forlì.jpg
+caption: Archivio UDI Forlì
 layout: article
 lat: '44.223149'
 lng: '12.0354912'

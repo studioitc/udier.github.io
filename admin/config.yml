@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   repo: bdus-dev/udi-er
   branch: master
   site_domain: retearchiviudier.it

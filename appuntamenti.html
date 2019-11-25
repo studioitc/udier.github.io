@@ -22,8 +22,9 @@ app_list:
     </div>
 
     <div class="row">
+      {% assign app = site.appuntamenti | sort: "date" | reverse %}
 
-      {% for page in site.appuntamenti %}
+      {% for page in app %}
       <div class="col-lg-4">
         <div class="process p-3 shadow">
           <div>

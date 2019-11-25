@@ -1,5 +1,6 @@
 ---
 title: Archivio digitale
+permalink: /archivio-digitale
 layout: article
 ---
 

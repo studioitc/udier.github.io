@@ -13,6 +13,8 @@ sass:
     sass_dir: _sass
 
 collections:
+  generale:
+    output: true
   archivi:
     output: true
   progetti:

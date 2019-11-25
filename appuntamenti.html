@@ -23,48 +23,22 @@ app_list:
 
     <div class="row">
 
-      {% assign count = 0 %}
-
-      {% for app in page.app_list %}
-      {% assign count = count | plus: 1 %}
+      {% for page in site.appuntamenti %}
       <div class="col-lg-4">
         <div class="process p-3 shadow">
           <div>
-            <h3>{{ app.title }}</h3>
-            <p class="date">{{ app.date | date: "%d/%m/%Y" }}</p>
-            {% if app.img %}
+            <h3>{{ page.title }}</h3>
+            <p class="date">{{ page.date | date: "%d/%m/%Y" }}</p>
             <p>
-              <img src="../{{ app.img }}" alt="{{ app.title }}" class="img-fluid" />
+              <a href="{{ page.file | relative_url }}" target="_blank" title="{{ page.title }}">
+                <img src="{{ page.img | relative_url }}" alt="{{ page.title }}" class="img-fluid" />
+              </a>
             </p>
-            {% endif %}
-            <p>Allegati</p>
-
-            {% for f in app.files %}
-            <li><a href="{{ f.path | relative_url }}">{{ f.name }}</a>
-            {% endfor %}
           </div>
 
         </div>
       </div>
       {% endfor %}
-
-{% comment %}
-
-      {% for post in site.appuntamenti %}
-      <div class="col-lg-4">
-        <div class="process p-3 shadow">
-          <span class="number small">{{ post.date | date: "%m/%y" }}</span>
-          <div>
-            <h3>{{ post.title }}</h3>
-            <p class="date">{{ post.date | date: "%d/%m/%Y" }}</p>
-            <p>{{ post.content | strip_html | truncatewords: 10 }}...</p>
-            <a href="{{ post.url | relative_url }}" title="{{ page.title}}">Apri</a>
-          </div>
-
-        </div>
-      </div>
-    {% endfor %}
-{% endcomment %}
 
     </div>
   </div>

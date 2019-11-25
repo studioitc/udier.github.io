@@ -50,10 +50,8 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Ante titolo", name: "pretitle", widget: "string"}
       - {label: "Titolo", name: "title", widget: "string"}
-      - {label: "Immagine", name: "image", widget: "image"}
-      - {label: "Dida immagine", name: "caption", widget: "string"}
       - {label: "Layout", name: "layout", widget: "hidden", default: "article"}
+      - {label: "Files", name: "files", widget: "list", field: {label: "File", name: "file", widget: "file"}}
       - {label: "Testo", name: "body", widget: "markdown"}
   

@@ -31,8 +31,8 @@ function Map(mapid, places, path2root){
     var markers = [];
 
     L.tileLayer(
-      'https://{s}.tile.openstreetmap.se/hydda/full/{z}/{x}/{y}.png'
-      // 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
+      // 'https://{s}.tile.openstreetmap.se/hydda/full/{z}/{x}/{y}.png'
+      'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
       ).addTo(map);
 
     this.clear = function(){

@@ -1,0 +1,37 @@
+---
+layout: internal
+---
+
+<div class="site-section bg-light">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-6 mb-5">
+        <h2 class="section-title">Archivio Digitale</h2>
+        <p>Censimenti archivi</p>
+      </div>
+    </div>
+
+    <div class="row">
+      {% assign app = site.archivio-digitale %}
+
+      {% for page in app %}
+      <div class="col-lg-4">
+        <div class="process p-3 shadow">
+          <div>
+            <h3>{{ page.title }}</h3>
+            <p class="date">{{ page.date | date: "%d/%m/%Y" }}</p>
+            <p>
+              <a href="{{ page.file | relative_url }}" target="_blank" title="{{ page.title }}">
+                <img src="{{ page.img | relative_url }}" alt="{{ page.title }}" class="img-fluid" />
+              </a>
+            </p>
+          </div>
+
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</div>

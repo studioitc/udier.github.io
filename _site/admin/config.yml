@@ -1,0 +1,67 @@
+backend:
+  name: git-gateway
+  repo: bdus-dev/udi-er
+  branch: master
+  site_domain: retearchiviudier.it
+
+media_folder: "images"
+
+
+collections:
+  - name: "generale" # Used in routes, e.g., /admin/collections/blog
+    label: "Parte generale" # Used in the UI
+    folder: "_generale/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Titolo", name: "title", widget: "string"}
+      - {label: "Immagine", name: "image", widget: "image"}
+      - {label: "Dida immagine", name: "caption", widget: "string"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "article"}
+      - {label: "Testo", name: "body", widget: "markdown"}
+  - name: "archivi" # Used in routes, e.g., /admin/collections/blog
+    label: "Archivi" # Used in the UI
+    folder: "_archivi/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Ante titolo", name: "pretitle", widget: "string"}
+      - {label: "Titolo", name: "title", widget: "string"}
+      - {label: "Immagine", name: "image", widget: "image"}
+      - {label: "Dida immagine", name: "caption", widget: "string"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "article"}
+      - {label: "Latitudine", name: "lat", widget: "string"}
+      - {label: "Longitudine", name: "lng", widget: "string"}
+      - {label: "Testo", name: "body", widget: "markdown"}
+  - name: "appuntamenti" # Used in routes, e.g., /admin/collections/blog
+    label: "Appuntamenti" # Used in the UI
+    folder: "_appuntamenti/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "/appuntamenti/{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Titolo", name: "title", widget: "string"}
+      - {label: "Data", name: "date", widget: "string", format: "DD/MM/YYY"}
+      - {label: "Immagine", name: "img", widget: "image"}
+      - {label: "File", name: "file", widget: "file"}
+      - {label: "Testo", name: "body", widget: "markdown"}
+  - name: "archivio-digitale" # Used in routes, e.g., /admin/collections/blog
+    label: "Archivio Digitale" # Used in the UI
+    folder: "_archivio_digitale/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "/archivio-digitale/{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Titolo", name: "title", widget: "string"}
+      - {label: "Data", name: "date", widget: "string", format: "DD/MM/YYY"}
+      - {label: "Immagine", name: "img", widget: "image"}
+      - {label: "File", name: "file", widget: "file"}
+      - {label: "Testo", name: "body", widget: "markdown"}
+  - name: "progetti" # Used in routes, e.g., /admin/collections/blog
+    label: "Progetti" # Used in the UI
+    folder: "_progetti/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Titolo", name: "title", widget: "string"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "article"}
+      - {label: "Files", name: "files", widget: "list", field: {label: "File", name: "file", widget: "file"}}
+      - {label: "Testo", name: "body", widget: "markdown"}

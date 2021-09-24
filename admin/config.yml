@@ -44,6 +44,17 @@ collections:
       - {label: "Immagine", name: "img", widget: "image"}
       - {label: "File", name: "file", widget: "file"}
       - {label: "Testo", name: "body", widget: "markdown"}
+  - name: "archivio-digitale" # Used in routes, e.g., /admin/collections/blog
+    label: "Archivio Digitale" # Used in the UI
+    folder: "_archivio_digitale/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "/archivio-digitale/{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Titolo", name: "title", widget: "string"}
+      - {label: "Data", name: "date", widget: "string", format: "DD/MM/YYY"}
+      - {label: "Immagine", name: "img", widget: "image"}
+      - {label: "File", name: "file", widget: "file"}
+      - {label: "Testo", name: "body", widget: "markdown"}
   - name: "progetti" # Used in routes, e.g., /admin/collections/blog
     label: "Progetti" # Used in the UI
     folder: "_progetti/" # The path to the folder where the documents are stored
@@ -54,4 +65,3 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "article"}
       - {label: "Files", name: "files", widget: "list", field: {label: "File", name: "file", widget: "file"}}
       - {label: "Testo", name: "body", widget: "markdown"}
-  

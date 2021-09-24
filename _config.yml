@@ -21,6 +21,8 @@ collections:
     output: true
   appuntamenti:
     output: true
+  archivio_digitale:
+    output: true
 
 defaults:
   - values:

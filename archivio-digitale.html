@@ -13,17 +13,17 @@ layout: internal
     </div>
 
     <div class="row">
-      {% assign app = site.archivio_digitale %}
 
-      {% for page in app %}
+      {% assign archivi_digitali = "Guida archivi CDD | Guida archivi UDI 2002 | Guida archivi UDI 2012 | Guida archivi UDI 2021" | split: ' | ' %}
+
+      {% for ad in archivi_digitali %}
       <div class="col-lg-4">
-        <div class="process p-3 shadow">
+        <div class="process p-3 shadow my-3">
           <div>
-            <h3>{{ page.title }}</h3>
-            <p class="date">{{ page.date | date: "%d/%m/%Y" }}</p>
+            <h3>{{ ad }}</h3>
             <p>
-              <a href="{{ page.file | relative_url }}" target="_blank" title="{{ page.title }}">
-                <img src="{{ page.img | relative_url }}" alt="{{ page.title }}" class="img-fluid" />
+              <a href="{{ "images/archivio-digitale/" | append: ad | append: ".pdf" | relative_url }}" target="_blank" title="{{ ad }}">
+                Scarica documento in formato PDF
               </a>
             </p>
           </div>
@@ -31,6 +31,7 @@ layout: internal
         </div>
       </div>
       {% endfor %}
+      
 
     </div>
   </div>

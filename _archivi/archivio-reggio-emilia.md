@@ -17,6 +17,6 @@ Il materiale documentario è stato donato nel 2021 al Centro documentazione donn
 Le fotografie sono depositate alla Biblioteca Panizzi di Reggio Emilia.
 [http://panizzi.comune.re.it/Sezione.jsp?titolo=Archivi+-+Polo+Archivistico&idSezione=943](http://panizzi.comune.re.it/Sezione.jsp?titolo=Archivi+-+Polo+Archivistico&idSezione=943)
 
-Inventario a stampa: Archivio Unione Donne Italiane Reggio Emilia, Inventario, documenti dal 1945 al 1992, (a cura di) Loretta Piccinini, Reggio Emilia, 1999.
+Inventario a stampa: Archivio Unione Donne Italiane Reggio Emilia, *Inventario, documenti dal 1945 al 1992*, (a cura di) Loretta Piccinini, Reggio Emilia, 1999.
 
-Elena Fava, Archivio UDI Reggio Emilia. Sezione grafica, 2003. Catalogo [Dattiloscritto, rilegato, vol. 1, pp. 9, cc. 397]
+Elena Fava, *Archivio UDI Reggio Emilia. Sezione grafica*, 2003. Catalogo [Dattiloscritto, rilegato, vol. 1, pp. 9, cc. 397]

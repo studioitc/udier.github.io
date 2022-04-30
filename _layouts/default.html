@@ -51,26 +51,26 @@
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
               {% for item in site.data.menu %}
                 {% if item.sub %}
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          {{ item.title }}
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      {{ item.title }}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      {% for i in item.sub %}
+                        <a  href="{% if i.url != '#' %}{{ i.url | relative_url }}{% else %}#{% endif %}" 
+                            title="{{ i.title }}"
+                            class="{% if page.url == i.url %} class="active"{% endif %}">
+                          {{ i.title }}
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          {% for i in item.sub %}
-                            <a  href="{% if i.url != '#' %}{{ i.url | relative_url }}{% else %}#{% endif %}" 
-                                title="{{ i.title }}"
-                                class="{% if page.url == i.url %} class="active"{% endif %}">
-                            {{ i.title }}
-                            </a>
-                          {% endfor %}
-                          </div>
-                      </li>
-                  {% else %}
-                      <li>
-                        <a href="{{ item.url | relative_url }}" title="{{ item.title }}" class="nav-link">
-                          {{ item.title }}
-                        </a>
-                      </li>
+                      {% endfor %}
+                    </div>
+                  </li>
+                {% else %}
+                  <li>
+                    <a href="{{ item.url | relative_url }}" title="{{ item.title }}" class="nav-link">
+                      {{ item.title }}
+                    </a>
+                  </li>
                 {% endif %}
               {% endfor %}
               </ul>

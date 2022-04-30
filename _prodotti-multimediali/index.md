@@ -1,7 +1,7 @@
 ---
 title: Archivio Digitale
 coll_id: prodotti-multimediali
-layout: list
+layout: article
 permalink: /prodotti-multimediali
 
 ---

@@ -54,6 +54,15 @@
                   <a href="{{ item.url | relative_url }}" title="{{ item.title }}" class="nav-link">
                     {{ item.title }}
                     </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    {% for i in item.sub %}
+                      <a  href="{% if i.url != '#' %}{{ i.url | relative_url }}{% else %}#{% endif %}" 
+                            title="{{ i.title }}"
+                            class="{% if page.url == i.url %} class="active"{% endif %}">
+                        {{ i.title }}
+                      </a>
+                      {% endfor %}
+                      </div>
                   </li>
               {% endfor %}
               </ul>

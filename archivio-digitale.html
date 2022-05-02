@@ -1,7 +1,5 @@
 ---
-
 layout: internal
-
 ---
 
 
@@ -28,14 +26,11 @@ layout: internal
 
 
 
-
     <div class="row">
 
 
 
-
       {% assign archivi_digitali = "Guida archivi UDI 2002 | Guida archivi UDI 2012 | Guida Archivi CDD 2021" | split: ' | ' %}
-
 
 
 
@@ -46,9 +41,7 @@ layout: internal
         <div class="process p-3 shadow my-3">
 
           <div>
-
             <h3>{{ ad }}</h3>
-
             <p>
 
               <a href="{{ "images/archivio-digitale/" | append: ad | append: ".pdf" | relative_url }}" target="_blank" title="{{ ad }}">
@@ -56,18 +49,12 @@ layout: internal
                 Scarica documento in formato PDF
 
               </a>
-
             </p>
-
           </div>
 
 
-
-
         </div>
-
       </div>
-
       {% endfor %}
 
       
@@ -76,8 +63,5 @@ layout: internal
 
 
     </div>
-
   </div>
-
 </div>
-

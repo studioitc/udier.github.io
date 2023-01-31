@@ -4,36 +4,42 @@ layout: internal
 
 <div class="site-section bg-light">
   <div class="container">
-
     <div class="row">
       <div class="col-lg-6 mb-5">
         <h2 class="section-title">News e Appuntamenti</h2>
-        <p>In occasione del suo trentennale, la Rete Archivi UDI Emilia-Romagna”
+        <p>
+          In occasione del suo trentennale, la Rete Archivi UDI Emilia-Romagna”
           promuove un ciclo di iniziative territoriali a partire dal mese di
-          ottobre 2019 e che proseguiranno fino alla primavera 2020.</p>
+          ottobre 2019 e che proseguiranno fino alla primavera 2020.
+        </p>
       </div>
     </div>
 
     <div class="row">
-      {% assign app = site.appuntamenti | sort: "date" | reverse %}
-
-      {% for page in app %}
-      <div class="col-lg-4">
-        <div class="process p-3 shadow">
+      {% assign app = site.appuntamenti | sort: "date" | reverse %} {% for page
+      in app %}
+      <div class="col-lg-4 mb-3">
+        <div class="process p-3 shadow h-100">
           <div>
             <h3>{{ page.title }}</h3>
             <p class="date">{{ page.date | date: "%d/%m/%Y" }}</p>
             <p>
-              <a href="{{ page.file | relative_url }}" target="_blank" title="{{ page.title }}">
-                <img src="{{ page.img | relative_url }}" alt="{{ page.title }}" class="img-fluid" />
+              <a
+                href="{{ page.file | relative_url }}"
+                target="_blank"
+                title="{{ page.title }}"
+              >
+                <img
+                  src="{{ page.img | relative_url }}"
+                  alt="{{ page.title }}"
+                  class="img-fluid"
+                />
               </a>
             </p>
           </div>
-
         </div>
       </div>
       {% endfor %}
-
     </div>
   </div>
 </div>
